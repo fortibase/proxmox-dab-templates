@@ -1,0 +1,10 @@
+[Unit]
+Description=Script to execute on first boot
+ConditionPathExists=/var/log/template-firstboot.log
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/template-firstboot.sh
+
+[Install]
+WantedBy=multi-user.target
